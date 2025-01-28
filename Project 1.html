@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project One : Color Changer</title>
+</head>
+<style>
+	.button {
+		border: solid;
+		border-color: black;
+		padding: 5%;
+		margin: 1%;
+		height: 100px;
+		width: 100px;
+	}
+	h1{
+		text-align: center;
+		color: green;
+		font-family: sans-serif;
+		text-decoration: underline;
+	}
+	#grey{background-color: grey}
+	#mediumseagreen{background-color: mediumseagreen;}
+	#dodgerblue{background-color: dodgerblue;}
+	#mediumpurple{background-color: mediumpurple;}
+
+	body{
+		display: flex;
+		text-align: center;
+		justify-content: space-evenly;
+		background-color: teal;
+
+	}
+	h2, span{
+		color:powderblue;
+	}
+	
+</style>
+<body>
+
+	<div class="canvas">
+		<h1>Color Switch</h1>
+
+			<button class="button" id='grey'></button>
+			<button class="button" id='mediumpurple'></button>
+			<button class="button" id='dodgerblue'></button>
+			<button class="button" id='mediumseagreen'></button>
+			<button class="button" id='reset'>Reset</button>
+
+
+		<h2> Try clicking on the button above
+			<span>to change the color of the background !</span>
+		</h2>
+
+
+
+
+	</div>
+<script>
+	
+	const button = document.querySelectorAll('.button')
+	const body = document.querySelector('body')
+	button.forEach( function(button) {
+		//console.log(button);
+		button.addEventListener('click', function(e) {
+			console.log(e);
+			console.log(e.target);
+
+			if (e.target.id === 'grey') {body.style.backgroundColor = e.target.id}
+
+			if (e.target.id === 'mediumseagreen') {body.style.backgroundColor = e.target.id}
+
+			if (e.target.id === 'dodgerblue') {body.style.backgroundColor = e.target.id}
+
+			if (e.target.id === 'mediumpurple') {body.style.backgroundColor = e.target.id}
+
+			if (e.target.id === 'reset') {
+				 body.style.backgroundColor = 'teal'
+				
+				setTimeout( function() {
+					alert('Page is now reset')
+				},1000)
+
+
+			}
+
+		})
+} )
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>GUESS THE NUMBER</title>
+    <style>
+     body {
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes sure the body takes the full height */
+    margin: 0;
+}
+
+#plate {
+
+    background-color: #000000;
+    height: 90vh;
+    width: 90vw;
+    margin: 5vh auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(26, 26, 26, 0.5);
+    padding: 20px; /* Adds some spacing inside the plate */
+}
+
+h1 {
+    color: #D3D3D3;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+p {
+    color: #8B0000;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 24px;
+    font-family: 'Courier New', monospace;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #333333;
+    height: 150px;
+    width: 550px;
+    border-radius: 10px;
+    margin: 20px auto; /* Centers the result div */
+    padding: 1px;
+    text-align: center; /* Centers text inside the result div */
+}
+
+#pGuess, #remGuess {
+    color: #f0f0f0;
+    font-family: Garamond, serif;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    width: 200px; /* Increases the width */
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: maroon;
+}
+
+.lowHigh{
+    font-family: Garamond, serif;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="plate">
+
+        <h1>GUESS THE NUMBER</h1>
+        <p> Try and guess a random number between 1 and 100. You have 10 attempts to guess the right one! </p>
+
+        <form>
+            <label for="guessField" id="guessheading"></label>
+            <input type="text" id="guessField">
+            <input type="submit" value="Submit Guess" id="submitguess">
+        </form>
+
+        <div class="result">
+            <p id="pGuess">Previous Guesses :</p>   
+            <p id="remGuess">Guesses Remaining :<span>10 </span></p>  
+            <p class="lowHigh"></p>          
+
+
+        </div>
+
+
+
+    </div>
+
+
+<script src="P4 JS.js"></script>
+</body>
+</html>

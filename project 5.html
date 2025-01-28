@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PROJECT 5 - COLOR CAROUSEL</title>
+	<style>
+		body{
+			background-color:black;
+			color: greenyellow;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1 id="heading1">PRESS START TO BEGIN THE COLOR CAROUSEL</h1>
+	<button id="start">START</button>
+
+	<h1> PRESS STOP TO PAUSE THE COLOR CAROUSEL</h1>
+	<button id="stop">STOP</button>
+
+
+<script >
+
+	const randomColor = function(){
+		const hex = '0123456789ABCDEF'
+		let color = '#'
+		for (let i = 0; i < 6; i++) {
+			color += hex[Math.floor(Math.random()*16)]
+		}
+		return color
+	}
+let stoppedColors;
+	const startColor = function () {
+		function changeBGcolor() {
+					document.body.style.backgroundColor = randomColor()
+				}
+		stoppedColors = setInterval(changeBGcolor, 1000)
+	}
+	const stopColor = function () {
+		clearInterval(stoppedColors)
+		stoppedColors = null
+	}
+
+	document.querySelector('#start').addEventListener('click', startColor)
+
+	document.querySelector('#stop').addEventListener('click', stopColor)
+
+
+
+
+
+	
+</script>
+</body>
+</html>
