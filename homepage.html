@@ -12,7 +12,7 @@
 		.container{
 			height: 100vh;
 			display: grid;
-			grid-template-rows: 100px 100px 100px;
+			grid-template-rows: repeat(3, 100px);
 			grid-template-columns: 200px 200px;
 			grid-column-gap: 10px;
 			grid-row-gap: 10px;
@@ -25,6 +25,8 @@
 			align-items: center;
 			justify-content: center;
 			border: navy solid 1px;
+			position: relative;
+			
 
 		}
 		.grid-item:hover{
@@ -35,7 +37,16 @@
 
 		}
 		a{
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			text-decoration: none;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			
 		}
 		a:visited{
 			color: seashell;
@@ -52,25 +63,25 @@
 <body>
 
 	<div class="container">
-		<a href="Project 1.html" target="_blank">	
-			<div class="grid-item item1">COLOR CHANGER</div>
-		</a>
-		<a href="Project 2.html" target="_blank">
-			<div class="grid-item">BMI GENERATOR</div>
-		</a>
-		<a href="Project 3.html" target="_blank">
-			<div class="grid-item">SIMPLE CLOCK</div>
-		</a>
-		<a href="Project 4.html" target="_blank">
-			<div class="grid-item">GUESS THE NUMBER</div>
-		</a>
-		<a href="Project 5.html" target="_blank">
-			<div class="grid-item">COLOR CAROUSEL</div>
-		</a>
-		<a href="Project 6.html" target="_blank">
-			<div class="grid-item"> TBA </div>
-		</a>
-	</div>
+			<div class="grid-item item1">
+				<a href="Project 1.html" target="_blank">COLOR CHANGER</a>	
+			</div>
+			<div class="grid-item">
+				<a href="Project 2.html" target="_blank">BMI GENERATOR</a>
+			</div>
+			<div class="grid-item">
+				<a href="Project 3.html" target="_blank">SIMPLE CLOCK</a>
+			</div>
+			<div class="grid-item">
+				<a href="Project 4.html" target="_blank">GUESS THE NUMBER</a>
+			</div>
+			<div class="grid-item">
+				<a href="Project 5.html" target="_blank">COLOR CAROUSEL</a>
+					</div>
+			<div class="grid-item">  
+				<a href="Project 6.html" target="_blank">TBA</a>
+			</div>
+	
 
 
 </body>
