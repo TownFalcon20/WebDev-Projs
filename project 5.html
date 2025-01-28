@@ -44,10 +44,14 @@
 	}
 let stoppedColors;
 	const startColor = function () {
+
+		if (!stoppedColors) {
+			stoppedColors = setInterval(changeBGcolor, 1000)
+		}
+		
 		function changeBGcolor() {
 					document.body.style.backgroundColor = randomColor()
 				}
-		stoppedColors = setInterval(changeBGcolor, 1000)
 	}
 	const stopColor = function () {
 		clearInterval(stoppedColors)
