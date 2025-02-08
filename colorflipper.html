@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Color Flipper</title>
+
+	<style> 
+		body{
+			transition : background-color 1s;
+		}
+		section#color-display{
+			transition: background-color 1s;
+			font-family: Trebuchet MS, sans-serif;
+			margin: 100px auto;
+			width: 50%;
+			background-color: grey;
+			box-shadow: rgba(0, 0, 0, 0.2);
+			border-radius: .5rem;
+			padding: 4rem;
+		}
+
+		section#color-display h1 {
+			font-weight: 1000;
+			color: white;
+		}
+		section#color-display #new-color {
+			width: 100%;
+			background-color: black;
+			color: whitesmoke;
+			padding: 1rem;
+			border:none;
+			font-size: 1rem;
+			cursor: pointer;
+		}
+		section#color-display #new-color:hover{
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<section id="color-display">
+		<h1>
+			Background : <span id="current-color"> #fffff</span>
+		</h1>
+		<button id="new-color"> New Color </button>
+
+	</section>
+<script src="colorflipper.js">
+	
+	
+
+
+</script>
+</body>
+</html>
