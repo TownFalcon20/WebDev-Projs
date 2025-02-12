@@ -18,7 +18,7 @@ navLinks.forEach( link => {
 		hideSections();
 
 		link.parentElement.classList.add('active')
-		const section = document.querySelector('link.hash');
+		const section = document.querySelector(link.hash);
 		section.classList.remove('hidden')
 	})
 })
