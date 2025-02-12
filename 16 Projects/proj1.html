@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HELLO WORLD</title>
+	<style>
+		body{
+			padding: 4rem;
+			font-family: Georgia, serif;
+		}
+
+		h1 > span {
+			color: red;
+		}
+
+		button {
+			background-color: teal;
+			color: whitesmoke;
+			height: 2rem;
+			width: 6rem;
+			padding: .5rem 1 rem;
+			border: 0;
+			cursor: pointer;
+			box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		button:hover{
+			background-color: darkslategray;
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<h1>Hello <span> World !</span> </h1>
+	<button>Say HI </button>
+
+
+<script>
+		
+	const btnElement = document.querySelector('button')
+	const spanElem = document.querySelector('span')
+
+	btnElement.addEventListener('click', function () {
+			const yourName = prompt('Please enter your name : ')
+			spanElem.textContent = yourName	
+})
+
+
+</script>
+</body>
+</html>

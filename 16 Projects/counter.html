@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Counter</title>
+	<style>
+		body{
+			font-family: sans-serif;
+			background-color: black;
+		}
+		#counter{
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+		#counter-display {
+			font-size: 5rem;
+			text-align: center;
+			color: whitesmoke;
+		}
+		#counter button {
+			border: 0;
+			padding: 1rem 2rem;
+			font-size: 2.5rem;
+			cursor: pointer;
+		}
+		#counterAdd{
+			background-color: chartreuse;
+		}
+		#counterAdd:hover{
+			background-color: yellowgreen;
+		}
+		#counterSub{
+			background-color: firebrick;
+		}
+		#counterSub:hover{
+			background-color: saddlebrown;
+		}
+
+	</style>
+</head>
+<body>
+	<section id="counter">
+		<div>
+			<h1 id = "counter-display">0</h1>
+			<div id="counterControls">
+				<button id="counterAdd"> + </button>
+				<button id="counterSub"> - </button>
+			</div>
+		</div>
+
+
+	</section>
+
+
+
+
+<script>
+	const subBtn = document.getElementById('counterSub')
+	const addBtn = document.getElementById('counterAdd')
+	const counterDisplay = document.getElementById('counter-display')
+
+	let total = 0; 
+	const limit = 50
+
+	const updateCounterdisplay = () => {
+
+		if (total >= limit){
+			total = limit 
+		}
+
+		if (total < 0) {
+			total = 0 
+		}
+
+		counterDisplay.innerText = total
+
+		document.body.style.setProperty('background-color', `rgb(${ ( total / limit ) * 255 }, 64, 0)`)
+	}
+
+	addBtn.addEventListener('click', function(){
+		total += 1
+		updateCounterdisplay()
+	})
+	subBtn.addEventListener('click', () => {
+		total -= 1
+		updateCounterdisplay()
+	})
+
+updateCounterdisplay()
+</script>
+</body>
+</html>
